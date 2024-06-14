@@ -1,0 +1,18 @@
+// Map through an array of arrays of objects
+// Example: Extract names from the data array
+// Desired outcome: ['John', 'Jane', 'Bob']
+const data = [
+    [
+        { name: 'John', age: 25 },
+        { name: 'Jane', age: 30 },
+        { name: 'Bob', age: 35 }
+    ],
+    [
+        { name: 'Alice', age: 27 },
+        { name: 'Eve', age: 32 },
+        { name: 'Charlie', age: 40 }
+    ]
+];
+
+const names = data.flatMap(arr => arr.map(obj => obj.name));
+console.log(names); // Output: ['John', 'Jane', 'Bob', 'Alice', 'Eve', 'Charlie']
